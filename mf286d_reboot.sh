@@ -47,25 +47,20 @@ md5_prefix=$(md5 "$prefix")
 string=$md5_prefix$get_rd
 md5_hash=$(md5 "$string")
 
-echo $md5_prefix
-echo $get_rd
-echo $md5_hash
-
-
 #############  SEND REBOOT COMMAND  ######################################
 
-# curl -X POST \
-#   http://192.168.32.1/goform/goform_set_cmd_process \
-#   -H 'Accept: application/json, text/javascript, */*; q=0.01' \
-#   -H 'Accept-Encoding: gzip, deflate' \
-#   -H 'Accept-Language: it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7' \
-#   -H 'Connection: keep-alive' \
-#   -H "$(echo 'Cookie: "zwsd="'"$cookie")" \
-#   -H 'Host: 192.168.32.1' \
-#   -H 'Origin: http://192.168.32.1' \
-#   -H 'Referer: http://192.168.32.1/index.html' \
-#   -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36' \
-#   -H 'X-Requested-With: XMLHttpRequest' \
-#   --data "isTest=false&goformId=REBOOT_DEVICE&AD=$md5_hash"
+curl -X POST \
+  http://192.168.32.1/goform/goform_set_cmd_process \
+  -H 'Accept: application/json, text/javascript, */*; q=0.01' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Accept-Language: it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'Connection: keep-alive' \
+  -H "$(echo 'Cookie: "zwsd="'"$cookie")" \
+  -H 'Host: 192.168.32.1' \
+  -H 'Origin: http://192.168.32.1' \
+  -H 'Referer: http://192.168.32.1/index.html' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36' \
+  -H 'X-Requested-With: XMLHttpRequest' \
+  --data "isTest=false&goformId=REBOOT_DEVICE&AD=$md5_hash"
 
 

@@ -11,7 +11,8 @@ in the example the password is "Testpassword" ->Base64encode -> VGVzdHBhc3N3b3Jk
  --data 'isTest=false&goformId=LOGIN&password=D55468C746779416A70BCFD78A348012EDFE669CD7987DAE35DF13AC16CC40F2' \
 
 
-Enter this on your config.yaml, save and restart Home Assistant
+
+### Enter following configuration on your config.yaml, save and restart Home Assistant
 #### Example config.yaml configuration
 
 ```yaml

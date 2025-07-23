@@ -15,7 +15,7 @@ response_headers=$(curl -X POST \
   -H 'Origin: http://192.168.32.1' \
   -H 'Referer: http://192.168.32.1/index.html' \
   -H 'X-Requested-With: XMLHttpRequest' \
- --data 'isTest=false&goformId=LOGIN&password=0394EEA3799CCCC752A3B81D0D21979249F7984204C3AFD28207CFF6B7683F71' \
+ --data 'isTest=false&goformId=LOGIN&password=D55468C746779416A70BCFD78A348012EDFE669CD7987DAE35DF13AC16CC40F2' \
   -i)
 
 cookie=$(echo "$response_headers" | grep -i '^Set-Cookie:' | sed -n 's/.*zwsd="\([^;]*\).*/\1/p')

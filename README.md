@@ -21,3 +21,7 @@ shell_command:
 ```
 
 Now on Developer tools -> Actions enter shell_command.restart_modem_zte and click Perform action to restart the modem or you can use action in Automations
+
+#### This script has been tested with following setup:
+- Modem ZTE MF286D with Nordic B12 firmware
+- Home Assistant 2025.7
